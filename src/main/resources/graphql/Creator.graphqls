@@ -1,0 +1,6 @@
+type Creator {
+    id: ID!
+    name: String!
+    email: String!
+    videos: [Video]
+}
