@@ -4,6 +4,7 @@ import com.atem.graphqldemo.dao.entities.Creator;
 import com.atem.graphqldemo.dao.entities.Video;
 import com.atem.graphqldemo.dao.repositories.CreatorRepository;
 import com.atem.graphqldemo.dao.repositories.VideoRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,6 +24,11 @@ public class GraphqlDemoApplication{
 	private CreatorRepository creatorRepository;
 	@Autowired
 	private VideoRepository videoRepository;
+
+	@Bean
+	public ModelMapper modelMapper() {
+		return new ModelMapper();
+	}
 	@Bean
 	public CommandLineRunner startup() {
 

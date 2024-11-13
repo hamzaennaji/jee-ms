@@ -23,6 +23,6 @@ public class Video {
     private String name, url, description;
     private Date publishDate;
     @ManyToOne
-    Creator creator;
+    private Creator creator;
 
 }
